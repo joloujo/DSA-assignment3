@@ -6,17 +6,22 @@ package org.example
  */
 interface Graph<VertexType> {
     /**
+     * Add a [vertex] to the graph
+     */
+    fun addVertex(vertex: VertexType)
+
+    /**
      * @return the vertices in the graph
      */
     fun getVertices(): Set<VertexType>
 
     /**
-     * Add an
+     * Add an edge [from] one vertex [to] another vertex
      */
     fun addEdge(from: VertexType, to: VertexType, cost: Double)
 
     /**
-     *
+     * @ return the edge weights [from] one vertex to all of it's neighbors
      */
     fun getEdges(from: VertexType): Map<VertexType, Double>
 
